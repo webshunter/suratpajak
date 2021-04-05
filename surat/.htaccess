@@ -1,0 +1,133 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+
+
+RewriteRule ^login$ login-form.php [L]
+RewriteRule ^login-failed$ login-form.php?alert=1 [L]
+RewriteRule ^logout$ login-form.php?alert=2 [L]
+RewriteRule ^login-error$ login-form.php?alert=3 [L]
+
+RewriteRule ^beranda$ main.php?module=beranda [L]
+
+RewriteRule ^buku-tamu$ main.php?module=buku_tamu [L]
+RewriteRule ^buku-tamu-add(.*)$ main.php?module=form_buku_tamu&form=add [L]
+RewriteRule ^buku-tamu-success-add$ main.php?module=buku_tamu&alert=1 [L]
+RewriteRule ^buku-tamu-error4-(.*)$ main.php?module=buku_tamu&nama=$1&alert=4 [L]
+RewriteRule ^buku-tamu-delete-(.*)$ modules/buku-tamu/proses.php?act=delete&id=$1 [L]
+RewriteRule ^buku-tamu-success-delete$ main.php?module=buku_tamu&alert=3 [L]
+RewriteRule ^buku-tamu-update-(.*)$ main.php?module=form_buku_tamu&form=edit&id=$1 [L]
+RewriteRule ^buku-tamu-success-update$ main.php?module=buku_tamu&alert=2 [L]
+RewriteRule ^laporan-buku-tamu-pdf$ modules/buku-tamu/pdf.php [L]
+RewriteRule ^laporan-buku-tamu-excel$ modules/buku-tamu/excel.php [L]
+
+RewriteRule ^profile$ main.php?module=profile [L]
+RewriteRule ^profile-add(.*)$ main.php?module=form_profile&form=add [L]
+RewriteRule ^profile-error7-(.*)$ main.php?module=profile&nama=$1&alert=7 [L]
+RewriteRule ^profile-success-add$ main.php?module=profile&alert=1 [L]
+RewriteRule ^profile-delete-(.*)$ modules/profile/proses.php?act=delete&id=$1 [L]
+RewriteRule ^profile-success-delete$ main.php?module=profile&alert=3 [L]
+RewriteRule ^profile-detail-(.*)$ main.php?module=form_profile&form=detail&id=$1 [L]
+RewriteRule ^profile-update-(.*)$ main.php?module=form_profile&form=edit&id=$1 [L]
+RewriteRule ^profile-success-update$ main.php?module=profile&alert=2 [L]
+RewriteRule ^profile-disposisi-(.*)$ modules/profile/disposisi.php?id=$1 [L]
+RewriteRule ^laporan-profile-pdf$ modules/profile/pdf.php [L]
+RewriteRule ^laporan-profile-excel$ modules/profile/excel.php [L]
+
+RewriteRule ^surat-masuk$ main.php?module=surat_masuk [L]
+RewriteRule ^surat-masuk-add$ main.php?module=form_surat_masuk&form=add [L]
+RewriteRule ^surat-masuk-detail-(.*)$ main.php?module=form_surat_masuk&form=detail&id=$1 [L]
+RewriteRule ^surat-masuk-update-(.*)$ main.php?module=form_surat_masuk&form=edit&id=$1 [L]
+RewriteRule ^surat-masuk-delete-(.*)$ modules/surat-masuk/proses.php?act=delete&id=$1 [L]
+RewriteRule ^surat-masuk-success-add$ main.php?module=surat_masuk&alert=1 [L]
+RewriteRule ^surat-masuk-success-update$ main.php?module=surat_masuk&alert=2 [L]
+RewriteRule ^surat-masuk-success-delete$ main.php?module=surat_masuk&alert=3 [L]
+RewriteRule ^surat-masuk-error1$ main.php?module=surat_masuk&alert=4 [L]
+RewriteRule ^surat-masuk-error2$ main.php?module=surat_masuk&alert=5 [L]
+RewriteRule ^surat-masuk-error3$ main.php?module=surat_masuk&alert=6 [L]
+
+RewriteRule ^surat-masuk-disposisi-(.*)$ modules/surat-masuk/disposisi.php?id=$1 [L]
+RewriteRule ^laporan-surat-masuk-pdf$ modules/surat-masuk/pdf.php [L]
+RewriteRule ^laporan-surat-masuk-excel$ modules/surat-masuk/excel.php [L]
+
+RewriteRule ^surat-keluar$ main.php?module=surat_keluar [L]
+RewriteRule ^surat-keluar-add$ main.php?module=form_surat_keluar&form=add [L]
+RewriteRule ^surat-keluar-detail-(.*)$ main.php?module=form_surat_keluar&form=detail&id=$1 [L]
+RewriteRule ^surat-keluar-update-(.*)$ main.php?module=form_surat_keluar&form=edit&id=$1 [L]
+RewriteRule ^surat-keluar-delete-(.*)$ modules/surat-keluar/proses.php?act=delete&id=$1 [L]
+RewriteRule ^surat-keluar-success-add$ main.php?module=surat_keluar&alert=1 [L]
+RewriteRule ^surat-keluar-success-update$ main.php?module=surat_keluar&alert=2 [L]
+RewriteRule ^surat-keluar-success-delete$ main.php?module=surat_keluar&alert=3 [L]
+RewriteRule ^surat-keluar-error1$ main.php?module=surat_keluar&alert=4 [L]
+RewriteRule ^surat-keluar-error2$ main.php?module=surat_keluar&alert=5 [L]
+RewriteRule ^surat-keluar-error3$ main.php?module=surat_keluar&alert=6 [L]
+
+RewriteRule ^surat-keluar-amplop-(.*)$ modules/surat-keluar/amplop.php?id=$1 [L]
+RewriteRule ^laporan-surat-keluar-pdf$ modules/surat-keluar/pdf.php [L]
+RewriteRule ^laporan-surat-keluar-excel$ modules/surat-keluar/excel.php [L]
+
+
+RewriteRule ^kotakberkas$ main.php?module=kotakberkas [L]
+RewriteRule ^kotakberkas-add$ main.php?module=form_kotakberkas&form=add [L]
+RewriteRule ^kotakberkas-detail-(.*)$ main.php?module=form_kotakberkas&form=detail&id=$1 [L]
+RewriteRule ^kotakberkas-update-(.*)$ main.php?module=form_kotakberkas&form=edit&id=$1 [L]
+RewriteRule ^kotakberkas-delete-(.*)$ modules/kotakberkas/proses.php?act=delete&id=$1 [L]
+RewriteRule ^kotakberkas-success-add$ main.php?module=kotakberkas&alert=1 [L]
+RewriteRule ^kotakberkas-success-update$ main.php?module=kotakberkas&alert=2 [L]
+RewriteRule ^kotakberkas-success-delete$ main.php?module=kotakberkas&alert=3 [L]
+RewriteRule ^kotakberkas-error1$ main.php?module=kotakberkas&alert=4 [L]
+RewriteRule ^kotakberkas-error2$ main.php?module=kotakberkas&alert=5 [L]
+RewriteRule ^kotakberkas-error3$ main.php?module=kotakberkas&alert=6 [L]
+
+RewriteRule ^rekapitulasi$ main.php?module=rekapitulasi [L]
+RewriteRule ^rekapitulasi-cetak-(.*)$ modules/rekapitulasi/pdf.php?id=$1 [L]
+RewriteRule ^rekapitulasi-export-(.*)$ modules/rekapitulasi/excel.php?id=$1 [L]
+
+RewriteRule ^instansi$ main.php?module=instansi [L]
+RewriteRule ^instansi-add$ main.php?module=form_instansi&form=add [L]
+RewriteRule ^instansi-update-(.*)$ main.php?module=form_instansi&form=edit&id=$1 [L]
+RewriteRule ^instansi-delete-(.*)$ modules/instansi/proses.php?act=delete&id=$1 [L]
+RewriteRule ^instansi-success-add$ main.php?module=instansi&alert=1 [L]
+RewriteRule ^instansi-success-update$ main.php?module=instansi&alert=2 [L]
+RewriteRule ^instansi-success-delete$ main.php?module=instansi&alert=3 [L]
+RewriteRule ^instansi-error1-(.*)$ main.php?module=instansi&id=$1&alert=4 [L]
+RewriteRule ^instansi-error2-(.*)$ main.php?module=instansi&id=$1&alert=5 [L]
+
+RewriteRule ^konfigurasi-aplikasi$ main.php?module=config [L]
+RewriteRule ^konfigurasi-aplikasi-success$ main.php?module=config&alert=1 [L]
+RewriteRule ^konfigurasi-aplikasi-error1$ main.php?module=config&alert=2 [L]
+RewriteRule ^konfigurasi-aplikasi-error2$ main.php?module=config&alert=3 [L]
+RewriteRule ^konfigurasi-aplikasi-error3$ main.php?module=config&alert=4 [L]
+
+RewriteRule ^user$ main.php?module=user [L]
+RewriteRule ^user-add$ main.php?module=form_user&form=add [L]
+RewriteRule ^user-update-(.*)$ main.php?module=form_user&form=edit&id=$1 [L]
+RewriteRule ^user-delete-(.*)$ modules/user/proses.php?act=delete&id=$1 [L]
+RewriteRule ^user-success-add$ main.php?module=user&alert=1 [L]
+RewriteRule ^user-success-update$ main.php?module=user&alert=2 [L]
+RewriteRule ^user-success-delete$ main.php?module=user&alert=3 [L]
+RewriteRule ^user-error1-(.*)$ main.php?module=user&id=$1&alert=4 [L]
+RewriteRule ^user-error2-(.*)$ main.php?module=user&id=$1&alert=5 [L]
+
+RewriteRule ^backup-database$ main.php?module=backup [L]
+RewriteRule ^backup-database-proses$ modules/backup-database/proses.php?act=backup [L]
+RewriteRule ^backup-database-delete-(.*)$ modules/backup-database/proses.php?act=delete&id=$1 [L]
+RewriteRule ^backup-database-success$ main.php?module=backup&alert=1 [L]
+RewriteRule ^backup-database-success-delete$ main.php?module=backup&alert=2 [L]
+
+RewriteRule ^audit-trail$ main.php?module=audit_trail [L]
+RewriteRule ^audit-trail-export-pdf$ modules/audit-trail/pdf.php [L]
+RewriteRule ^audit-trail-export-excel$ modules/audit-trail/excel.php [L]
+
+RewriteRule ^password$ main.php?module=password [L]
+RewriteRule ^password-error1$ main.php?module=password&alert=1 [L]
+RewriteRule ^password-error2$ main.php?module=password&alert=2 [L]
+RewriteRule ^password-success$ main.php?module=password&alert=3 [L]
+
+ErrorDocument 404 http://localhost/surat/error-404.html
+ErrorDocument 403 http://localhost/surat/error-403.html
+
+
+
+Options All -Indexes
+</IfModule>

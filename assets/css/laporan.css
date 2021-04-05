@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000;
+	text-align: center;
+}
+
+#title{
+	float: none;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: #000;
+	margin-bottom: 4px;
+	font-size: 12pt;
+	text-decoration: none;
+	text-align: center;
+}
+
+#title-bapas{
+	float: none;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: #000;
+	margin-bottom: 4px;
+	font-size: 14pt;
+	text-decoration: none;
+	text-align: center;
+}
+
+#title-alamat{
+	float: none;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: #000;
+	margin-bottom: 5px;
+	font-size: 10pt;
+	text-decoration: none;
+	text-align: center;
+}
+
+#title-tanggal{
+	float: none;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: #000;
+	font-size: 10pt;
+	text-decoration: none;
+	text-align: center;
+}
+
+#isi{
+	font-size: 9pt;
+}
+
+.tr-title{
+	font-size: 9pt;
+	font-weight: bold;
+	color: #000;
+	background-color: #CCC;
+}
+
+#footer-tanggal{
+	color: #000;
+	margin-top: 40px;
+	margin-left: 780px;
+	font-size: 10pt;
+	text-align: center;
+}
+
+#footer-jabatan{
+	color: #000;
+	margin: 3px 0 80px 780px;
+	font-size: 10pt;
+	text-align: center;
+}
+
+#footer-pegawai-nama{
+	color: #000;
+	font-weight: bold;
+	margin-left: 780px;
+	font-size: 10pt;
+	text-align: center;
+}
+
+#footer-pegawai-nip{
+	color: #000;
+	font-weight: bold;
+	margin: 3px 0 0 780px;
+	font-size: 10pt;
+	text-align: center;
+}
